@@ -1,4 +1,4 @@
-﻿##git命令
+##git命令
 
  - 列表项
 
@@ -69,8 +69,7 @@
      
      解决方法：`git remote rm origin`后再执行 `git remote add ...`命令
 
-
-  5. git push命令
+5.  git push命令
     `git push -u origin master` 将本地库提交到github上。
     
         这个过程可能出现的错误：
@@ -81,3 +80,13 @@
       解决方法：
 
         在bash中:1.`ssh-keygen -t rsa -b 4096 -C "dengluming"`回车,按提示操作，会生成`The key fingerprint`及值得随机图片。2. `ssh-agent -s`3.`ssh-add ~/.ssh/id_rsa` (这一步会出现的错误：`Could not open a connection to your authentication agent`解决:`ssh-add ~/.ssh/id_rsa`)
+       
+       	
+       	
+       可能出现的问题2：
+       
+       	`error: failed to push some refs to 'git@github.com:wangruiFE/base_tools.git'`
+       
+      解决的方案：
+      
+      		`git pull --rebase origin master`
